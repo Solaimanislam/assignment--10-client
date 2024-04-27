@@ -20,8 +20,8 @@ const AddCraft = () => {
         const customization = form.customization.value;
         const time = form.time.value;
         const status = form.status.value;
-        const email = form.email.value;
-        const uName = form.uName.value;
+        const email = user.email;
+        const uName = user.displayName
         const image = form.image.value;
 
         const newCraft = {name, scName, description, price, rating, customization, time, status, email, uName, image};

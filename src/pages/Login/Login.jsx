@@ -35,6 +35,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                toast.success('User Logged in Successfully');
 
                 // Navigate after login
                 navigate(location?.state ? location.state : '/');
@@ -42,6 +43,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error.message);
+                toast.warn('auth/invalid-credential');
             })
     }
 
@@ -50,10 +52,15 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            toast.success('User Logged in Successfully');
+
+            // Navigate after login
+            navigate(location?.state ? location.state : '/');
             
         })
         .catch(error => {
             console.error(error.message);
+            toast.warn('auth/invalid-credential');
         })
     }
 
@@ -74,6 +81,10 @@ const Login = () => {
                 e.target.reset();
                 // setSuccess('User Logged in Successfully');
                 toast.success('User Logged in Successfully');
+
+                // Navigate after login
+                navigate(location?.state ? location.state : '/');
+
             })
             .catch(error => {
                 console.error(error);

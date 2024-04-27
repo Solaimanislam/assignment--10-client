@@ -31,11 +31,11 @@ const Details = () => {
             <div className=" lg:flex items-center gap-4 justify-between">
                 <div className=" flex items-center lg:text-lg font-semibold gap-3 ">
                     
-                    <p className="  text-green-400"><span className=" text-black font-bold">Segment Name: </span> {craft.segment_name}</p>
+                    <p className="  text-red-400"><span className=" text-black font-bold">status: </span> {craft.status}</p>
                 </div>
                 <div className=" flex items-center lg:text-lg font-semibold gap-3 ">
                     
-                    <h4 className="  text-blue-400"><span className=" text-black font-bold">Location: </span> {craft.location}</h4>
+                    <h4 className="  text-blue-400"><span className=" text-black font-bold">Customization: </span> {craft.customization}</h4>
                 </div>
             </div>
             <div className=" lg:flex items-center gap-4 justify-between">
@@ -45,7 +45,7 @@ const Details = () => {
                 </div>
                 <div className=" flex items-center text-lg font-semibold gap-3 ">
 
-                    <h4 className="  text-blue-400"><span className=" text-black font-bold">Area: </span>{craft.area}</h4>
+                    <h4 className="  text-blue-400"><span className=" text-black font-bold">Time: </span>{craft.time}</h4>
                 </div>
             </div>
             

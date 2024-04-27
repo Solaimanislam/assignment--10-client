@@ -8,6 +8,7 @@ import AddCraft from "../pages/AddCraft/AddCraft";
 import PrivateRoutes from "./PrivateRoutes";
 import AllCraft from "../pages/AllCraft/AllCraft";
 import Details from "../pages/ViewDetails/Details";
+import MyCraft from "../pages/MyCraft/MyCraft";
 
 
 const routes = createBrowserRouter([
@@ -42,6 +43,10 @@ const routes = createBrowserRouter([
             {
                 path: 'addCraft',
                 element: <PrivateRoutes><AddCraft></AddCraft></PrivateRoutes>
+            },
+            {
+                path: 'myCraft',
+                element: <PrivateRoutes><MyCraft></MyCraft></PrivateRoutes>
             }
 
         ]
