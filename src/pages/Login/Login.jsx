@@ -2,13 +2,14 @@
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TabTitle } from "../utils/title";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import auth from "../../Firebase/firebase.config";
 import { signInWithPopup } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
-import Navbar from "../shared/Navbar/Navbar";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
@@ -84,7 +85,7 @@ const Login = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            
             <ToastContainer />
             <div className="hero min-h-screen bg-base-200" data-aos="zoom-in"
                     data-aos-easing="ease-out-cubic"

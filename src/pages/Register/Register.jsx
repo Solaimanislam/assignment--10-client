@@ -4,7 +4,8 @@ import { TabTitle } from "../utils/title";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
-import Navbar from "../shared/Navbar/Navbar";
+import 'react-toastify/dist/ReactToastify.css';
+
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
@@ -73,7 +74,7 @@ const Register = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            
             <ToastContainer />
             <div className="hero min-h-screen bg-base-200" data-aos="fade-up"
                     data-aos-easing="ease-out-cubic"
