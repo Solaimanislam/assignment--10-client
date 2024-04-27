@@ -2,12 +2,15 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+
+
 
 
 const MyCraft = () => {
 
     const { user } = useContext(AuthContext) || {};
-    // console.log(user);
+    
     const [item, setItem] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/myCraft/${user?.email}`)
@@ -19,6 +22,36 @@ const MyCraft = () => {
 
     const handleDelete = _id => {
         console.log(_id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/craft/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your Craft has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = item.filter(c => c._id !== _id);
+                            setItem(remaining);
+                        }
+                    })
+            }
+        });
     }
 
     return (
@@ -46,12 +79,22 @@ const MyCraft = () => {
                                         <h4 className="  text-blue-400">Status: {p.status}</h4>
                                     </div>
                                 </div>
+                                <div className=" flex items-center gap-1 justify-between">
+                                    <div className=" flex items-center text-lg font-semibold gap-1 ">
+
+                                        <p className=" text-orange-400">Customization: {p.customization}</p>
+                                    </div>
+                                    <div className=" flex items-center text-lg font-semibold gap-1 ">
+
+                                        <h4 className="  text-blue-800">Time: {p.time}</h4>
+                                    </div>
+                                </div>
                                 <div className=" flex justify-around">
 
-                                    <Link ><button className="btn btn-outline btn-primary">Update</button></Link>
-                                    <Link ><button 
-                                    onClick={() => handleDelete(p._id)}
-                                     className="btn btn-outline btn-secondary">Delete</button></Link>
+                                    <Link to={`updateCraft/${p._id}`} ><button className="btn btn-outline btn-primary">Update</button></Link>
+                                    <Link ><button
+                                        onClick={() => handleDelete(p._id)}
+                                        className="btn btn-outline btn-secondary">Delete</button></Link>
                                 </div>
                             </div>
                         </div>
