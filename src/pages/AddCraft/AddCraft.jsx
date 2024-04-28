@@ -54,7 +54,9 @@ const AddCraft = () => {
 
 
     return (
-        <div className=" container mx-auto bg-purple-300 rounded-xl p-3">
+        <div className=" container mx-auto bg-purple-300 rounded-xl p-3 " data-aos="zoom-in"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="3000">
             <h2 className="text-3xl font-bold text-center mb-8">Add Art & Craft</h2>
 
             <form onSubmit={handleAddCraft}>
