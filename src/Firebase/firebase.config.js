@@ -5,13 +5,17 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log('Inside firebase config',import.meta.env.VITE_PASS);
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAYNXYsbANN3C3uDxZsa9xGea0eebU9gTg",
-  authDomain: "craft-store-assignment.firebaseapp.com",
-  projectId: "craft-store-assignment",
-  storageBucket: "craft-store-assignment.appspot.com",
-  messagingSenderId: "387134816017",
-  appId: "1:387134816017:web:ecb9ceaebe2addd988d6b0"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
