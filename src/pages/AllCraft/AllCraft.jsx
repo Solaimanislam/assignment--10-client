@@ -12,6 +12,17 @@ const AllCraft = () => {
                 <h2 className=" text-3xl lg:text-5xl font-bold mb-4 text-purple-500">All Art & Craft items</h2>
                 <p className=" text-base lg:text-xl text-amber-600 font-medium">Welcome to SI Art & Craft, your ultimate destination for all things art and craft! Dive into a world where creativity knows no bounds and imagination takes flight. Whether you are a seasoned artist, a crafting enthusiast, or just beginning to explore the wonders of DIY projects, we have something special just for you.</p>
             </div>
+            <div className=" mx-auto text-center lg:mt-8">
+                <span className="label-text text-2xl font-semibold">Stored by</span>
+                <div className=" my-4">
+                    <select name="scName" className="p-3 rounded-lg border-2 border-emerald-400 ">
+                        <option value="price">Price</option>
+                        <option value="Portrait Drawing">Ascending price</option>
+                        <option value="Portrait Drawing">Descending price</option>
+                        
+                    </select>
+                </div>
+            </div>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:my-10 ">
                 {
                     crafts.map(craft => <AllCraftData

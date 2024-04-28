@@ -89,7 +89,7 @@ const Login = () => {
             .catch(error => {
                 console.error(error);
                 // setRegisterError(error.message);
-                toast.warn('auth/invalid-credential');
+                toast.warn('Password doesn’t match');
             })
 
     }
