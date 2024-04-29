@@ -5,6 +5,9 @@ import Service from "../Service/Service";
 import { useEffect, useState } from "react";
 import AllCraftData from "../AllCraftData/AllCraftData";
 // import CateDetails from "../ViewDetails/CateDetails";
+import Lottie from "lottie-react";
+import Art from '../../art.json'
+import Craft from '../../craft.json'
 
 
 
@@ -21,13 +24,14 @@ const Home = () => {
             });
     }, []);
 
-    console.log(item);
+    // console.log(item);
 
     return (
 
         <div className=" container mx-auto p-3">
             <Slider></Slider>
             {/*  */}
+            <Lottie animationData={Craft}></Lottie>
             <div className=" text-center mx-auto mt-6 lg:mt-12">
                 <h2 className=" text-3xl lg:text-5xl font-bold mb-4 text-blue-400">Craft Items Section</h2>
                 <p className=" text-base lg:text-xl font-medium">Welcome to our Craft Items Section, where creativity knows no bounds! Whether you are a seasoned crafter or just starting on your DIY journey, you have come to the right place. Here, you will find everything you need to unleash your imagination and bring your artistic visions to life.</p>

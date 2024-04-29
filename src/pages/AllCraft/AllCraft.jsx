@@ -2,12 +2,21 @@ import { Link, useLoaderData } from "react-router-dom";
 
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+// import { ImOpt } from "react-icons/im";
+// import { useTable } from "react-table";
 
 
 const AllCraft = () => {
 
-    const {sorting} = useContext(AuthContext);
+    const { sorting } = useContext(AuthContext);
     const crafts = useLoaderData();
+
+    
+
+   
+
+    crafts.sort((a,b) => a.price - b.price);
+    console.log(crafts);
 
     return (
         <div>
@@ -20,8 +29,8 @@ const AllCraft = () => {
                 <div className=" my-4">
                     <select name="sort" id="sort" className="p-3 rounded-lg border-2 border-emerald-400 " onClick={sorting}>
                         <option value="price">Price</option>
-                        <option value="Ascending">Ascending price</option>
-                        <option value="Descending">Descending price</option>
+                        <option  value="Ascending">Ascending price</option>
+                        <option  value="Descending">Descending price</option>
 
                     </select>
                 </div>
@@ -43,8 +52,8 @@ const AllCraft = () => {
                             {/* row 1 */}
 
                             {
-                                crafts.map((craft , index) => <tr key={craft._id}>
-                                    <th>{index+1}</th>
+                                crafts.map((craft, index) => <tr key={craft._id}>
+                                    <th>{index + 1}</th>
                                     <td>{craft.name}</td>
                                     <td>{craft.scName}</td>
                                     <td>{craft.price}</td>
