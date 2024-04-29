@@ -123,9 +123,9 @@ const Login = () => {
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
                             </div>
-                            <div className="form-control mt-6">
+                            <Link to='/'><div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
-                            </div>
+                            </div></Link>
                         </form>
                         <div className="text-3xl flex justify-center gap-6 border-b-2 pb-4">
                             <div className=" " onClick={handleGoogleSignIn}><FcGoogle /></div>
