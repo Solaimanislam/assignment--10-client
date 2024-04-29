@@ -1,9 +1,12 @@
-import { useLoaderData } from "react-router-dom";
-import AllCraftData from "../AllCraftData/AllCraftData";
+import { Link, useLoaderData } from "react-router-dom";
+
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 
 const AllCraft = () => {
 
+    const {sorting} = useContext(AuthContext);
     const crafts = useLoaderData();
 
     return (
@@ -15,21 +18,48 @@ const AllCraft = () => {
             <div className=" mx-auto text-center lg:mt-8">
                 <span className="label-text text-2xl font-semibold">Stored by</span>
                 <div className=" my-4">
-                    <select name="scName" className="p-3 rounded-lg border-2 border-emerald-400 ">
+                    <select name="sort" id="sort" className="p-3 rounded-lg border-2 border-emerald-400 " onClick={sorting}>
                         <option value="price">Price</option>
-                        <option value="Portrait Drawing">Ascending price</option>
-                        <option value="Portrait Drawing">Descending price</option>
-                        
+                        <option value="Ascending">Ascending price</option>
+                        <option value="Descending">Descending price</option>
+
                     </select>
                 </div>
             </div>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:my-10 ">
-                {
-                    crafts.map(craft => <AllCraftData
-                        key={craft._id}
-                        craft={craft}
-                    ></AllCraftData>)
-                }
+            <div className=" lg:my-10 ">
+                <div className="overflow-x-auto">
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Subcategory</th>
+                                <th>Price</th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+
+                            {
+                                crafts.map((craft , index) => <tr key={craft._id}>
+                                    <th>{index+1}</th>
+                                    <td>{craft.name}</td>
+                                    <td>{craft.scName}</td>
+                                    <td>{craft.price}</td>
+                                    <td> <Link
+                                        to={`/craft/${craft._id}`}
+                                    ><button className="btn btn-outline btn-secondary">Show Details</button></Link></td>
+                                </tr>)
+                            }
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     );

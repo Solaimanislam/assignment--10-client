@@ -32,6 +32,10 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
 
+    // sorting function
+
+    
+
     const logOut = () => {
         setLoading(true);
         return signOut(auth)
@@ -49,6 +53,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     const AuthInfo = { user, createUser, signInUser, logOut, loading, updateUserProfile, setUser }
+    
 
     return (
         <AuthContext.Provider value={AuthInfo}>

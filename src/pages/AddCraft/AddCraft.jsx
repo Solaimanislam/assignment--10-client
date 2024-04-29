@@ -68,7 +68,7 @@ const AddCraft = () => {
                         </div>
                         <input type="text" name="name" placeholder="item name" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Subcategory_Name</span>
                         </div>
@@ -92,7 +92,7 @@ const AddCraft = () => {
                         </div>
                         <input type="text" name="description" placeholder="short description" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Price</span>
                         </div>
@@ -107,7 +107,7 @@ const AddCraft = () => {
                         </div>
                         <input type="text" name="rating" placeholder="item rating" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Customization</span>
                         </div>
@@ -122,7 +122,7 @@ const AddCraft = () => {
                         </div>
                         <input type="text" name="time" placeholder="processing_time" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Stock Status</span>
                         </div>
@@ -137,7 +137,7 @@ const AddCraft = () => {
                         </div>
                         <input type="email" name="email" disabled placeholder={user.email} className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">User Name</span>
                         </div>

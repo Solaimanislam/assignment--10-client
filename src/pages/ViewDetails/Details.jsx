@@ -14,7 +14,7 @@ const Details = () => {
     // console.log(craft);
 
     return (
-        <div className="card bg-base-100 shadow-xl mb-6">
+        <div className="card bg-base-100 shadow-xl mb-6 p-3">
         <figure data-aos="fade-up"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="3000"><img className=" lg:w-1/2 rounded-xl lg:h-[450px]" src={craft.image} alt="Shoes" /></figure>

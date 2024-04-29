@@ -10,6 +10,7 @@ import AllCraft from "../pages/AllCraft/AllCraft";
 import Details from "../pages/ViewDetails/Details";
 import MyCraft from "../pages/MyCraft/MyCraft";
 import UpdateCraft from "../pages/UpdateCraft/UpdateCraft";
+import CateDetails from "../pages/ViewDetails/CateDetails";
 
 
 const routes = createBrowserRouter([
@@ -21,7 +22,8 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('http://localhost:5000/craft'),
+                
             },
             {
                 path: 'allArtCraft',
@@ -32,6 +34,11 @@ const routes = createBrowserRouter([
                 path: '/craft/:id',
                 element: <PrivateRoutes><Details></Details></PrivateRoutes>,
                 loader: () => fetch('http://localhost:5000/craft')
+            },
+            {
+                path: '/aCraft/:id',
+                element: <PrivateRoutes><CateDetails></CateDetails> </PrivateRoutes>,
+                loader: () => fetch('http://localhost:5000/ArtcraftS')
             },
             {
                 path: '/login',

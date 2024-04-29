@@ -67,7 +67,7 @@ const UpdateCraft = () => {
                         </div>
                         <input type="text" name="name" defaultValue={name} placeholder="item name" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Subcategory_Name</span>
                         </div>
@@ -91,7 +91,7 @@ const UpdateCraft = () => {
                         </div>
                         <input type="text" name="description" defaultValue={description}  placeholder="short description" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Price</span>
                         </div>
@@ -106,7 +106,7 @@ const UpdateCraft = () => {
                         </div>
                         <input type="text" name="rating" defaultValue={rating} placeholder="item rating" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Customization</span>
                         </div>
@@ -121,7 +121,7 @@ const UpdateCraft = () => {
                         </div>
                         <input type="text" name="time" defaultValue={time} placeholder="processing_time" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">Stock Status</span>
                         </div>
@@ -136,7 +136,7 @@ const UpdateCraft = () => {
                         </div>
                         <input type="email" name="email" defaultValue={email} placeholder="User_Email" className="input input-bordered w-full " />
                     </label>
-                    <label className="form-control md:w-1/2 ml-4">
+                    <label className="form-control md:w-1/2 lg:ml-4">
                         <div className="label">
                             <span className="label-text text-xl">User Name</span>
                         </div>
