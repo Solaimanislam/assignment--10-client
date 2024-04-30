@@ -56,8 +56,8 @@ const Navbar = () => {
                         {NavLinks}
                     </ul>
                 </div>
+                <img className=" lg:w-12 w-10 lg:h-12 h-10 rounded-full lg:ml-3" src={logo} alt="" />
                 <a className="btn lg:text-xl px-2 ">SIArt</a>
-                <img className=" lg:w-14 w-10 lg:h-14 h-10 rounded-full lg:ml-3" src={logo} alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

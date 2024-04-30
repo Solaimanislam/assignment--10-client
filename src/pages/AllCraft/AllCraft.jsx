@@ -13,18 +13,13 @@ const AllCraft = () => {
     
     const crafts = useLoaderData();
     const [sort, setSort] = useState(crafts);
-    // const [sorting, setSorting] = useState(crafts);
-    console.log('sort',sort);
-    // console.log(crafts);
-    // setSorting([...sort], sort);
-    // console.log(sorting);
-    // const sortedData = sortByKey(crafts, sort);
+   
 
     const handleSorts = () => {
         const sortCrafts = crafts.sort((a, b) => a.price - b.price)
         // console.log('button clicked');
-        setSort(sortCrafts)
-        console.log('clicked');
+        setSort([...sortCrafts])
+        // console.log('clicked');
     };
    
 
