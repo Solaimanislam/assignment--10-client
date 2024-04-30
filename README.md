@@ -1,8 +1,31 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# SI Art
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+## 🔗 Links
+
+Live link: https://craft-store-assignment.web.app/
+
+## 5 Features
+
+- Art and craft allow for boundless creativity. Artists and crafters can express themselves through various mediums, techniques, and styles, often pushing the boundaries of traditional norms to create something entirely new and unique.
+- Engaging in art and craft activities helps individuals develop a wide range of skills, including fine motor skills, hand-eye coordination, problem-solving, and spatial awareness.
+-  Art and craft often reflect the cultural heritage, traditions, and values of a society. From indigenous crafts to contemporary art movements, these forms of expression provide insight into the historical, social, and cultural contexts in which they are created.
+- You must login to view Art & Craft details
+- You can rent or sell your Art if you want
+
+
+
+## npm package
+
+- AOS Package
+- Animate.css
+- Swiper slider
+- React-simple-typewriter
+- React Awesome reveal
+
+
+
+
