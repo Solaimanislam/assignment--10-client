@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import Swal from "sweetalert2";
 
 
-const MyCard = ({ p }) => {
+const MyCard = ({ p}) => {
+    console.log(p);
 
     const [item, setItem] = useState([]);
 

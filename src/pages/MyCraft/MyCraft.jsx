@@ -3,6 +3,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+// import Button from "../Button/Button";
 
 
 
@@ -12,11 +13,14 @@ const MyCraft = () => {
     const { user } = useContext(AuthContext) || {};
 
     const [item, setItem] = useState([]);
+    const [items, setItems] = useState(item);
+   
     useEffect(() => {
         fetch(`https://carft-store-server.vercel.app/myCraft/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
+                setItems(data);
             });
     }, [user]);
 
@@ -54,23 +58,32 @@ const MyCraft = () => {
         });
     }
 
+    const filterItems = (e) => {
+        const coldItems = [...item];
+        const newItems = coldItems.filter((newVal) => newVal.customization === e.target.value);
+        setItems(newItems);
+        
+    }
+
+
     return (
         <div>
             <div className=" mx-auto text-center lg:mt-8">
                 <span className="label-text text-2xl font-semibold">Filter by</span>
                 <div className=" my-4">
-                    <select name="sort" id="sort" className="p-3 rounded-lg border-2 border-emerald-400 " >
+                    <select onChange={filterItems} name="sort" id="sort" className="p-3 rounded-lg border-2 border-emerald-400 " >
                         <option value="custom">Customization</option>
-                        <option value="True">True</option>
-                        <option value="False">False</option>
+                        <option  value="true">True</option>
+                        <option  value="false">False</option>
 
                     </select>
                 </div>
             </div>
+            {/* <Button menuItems={menuItems}></Button> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-3 container mx-auto">
                 {
-                    item?.map(p => (
+                    items?.map(p => (
                         <div key={p._id}  >
                             <div className="card card-compact bg-base-100 shadow-xl" data-aos="zoom-in"
                                 data-aos-easing="ease-out-cubic"
