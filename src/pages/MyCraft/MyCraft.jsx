@@ -13,7 +13,7 @@ const MyCraft = () => {
 
     const [item, setItem] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myCraft/${user?.email}`)
+        fetch(`https://carft-store-server.vercel.app/myCraft/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
@@ -34,7 +34,7 @@ const MyCraft = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/craft/${_id}`, {
+                fetch(`https://carft-store-server.vercel.app/craft/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -16,7 +16,7 @@ const Home = () => {
 
     const [item, setItem] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/ArtcraftS')
+        fetch('https://carft-store-server.vercel.app/ArtcraftS')
             .then((res) => res.json())
             .then((data) => {
                 setItem(data);
@@ -27,7 +27,7 @@ const Home = () => {
 
     return (
 
-        <div className=" container mx-auto p-3 border-2">
+        <div className=" container mx-auto p-3">
             <Slider></Slider>
             {/*  */}
 

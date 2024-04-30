@@ -22,23 +22,23 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/craft'),
+                loader: () => fetch('https://carft-store-server.vercel.app/craft'),
                 
             },
             {
                 path: 'allArtCraft',
                 element: <AllCraft></AllCraft>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('https://carft-store-server.vercel.app/craft')
             },
             {
                 path: '/craft/:id',
                 element: <PrivateRoutes><Details></Details></PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/craft')
+                loader: () => fetch('https://carft-store-server.vercel.app/craft')
             },
             {
                 path: '/aCraft/:id',
                 element: <PrivateRoutes><CateDetails></CateDetails> </PrivateRoutes>,
-                loader: () => fetch('http://localhost:5000/ArtcraftS')
+                loader: () => fetch('https://carft-store-server.vercel.app/ArtcraftS')
             },
             {
                 path: '/login',
@@ -59,7 +59,7 @@ const routes = createBrowserRouter([
             {
                 path: 'myCraft/updateCraft/:id',
                 element: <UpdateCraft></UpdateCraft>,
-                loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
+                loader: ({params}) => fetch(`https://carft-store-server.vercel.app/craft/${params.id}`)
             }
 
         ]
