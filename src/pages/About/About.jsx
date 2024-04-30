@@ -1,4 +1,4 @@
-
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
     return (
@@ -8,8 +8,12 @@ const About = () => {
                 data-aos-duration="3000">
                 <figure><img className=" h-64 w-full" src="https://i.ibb.co/9rYZknx/cus1.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">Amar Malik</h2>
-                    <p>I recently had the pleasure of purchasing my dream home through SI Enterprise, and I could not be happier with my experience. From start to finish, they exceeded my expectations every step of the way.</p>
+                    <Fade direction="down">
+                        <h2 className="card-title">Amar Malik</h2>
+                    </Fade>
+                    <Fade direction="right">
+                        <p>I appreciate the competitive pricing offered by SI Art & Craft. I received high-quality prints without breaking the bank.</p>
+                    </Fade>
                     <p><span className=" text-lg font-semibold">Rating:</span> <div className="rating">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
@@ -18,7 +22,9 @@ const About = () => {
                             checked />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div></p>
-                    <h2 className="card-title">Software Engineer</h2>
+                    <Fade direction="up">
+                        <h2 className="card-title">Software Engineer</h2>
+                    </Fade>
                 </div>
             </div>
             <div className="card lg:w-96 bg-base-100 shadow-xl" data-aos="zoom-in-right"
@@ -26,8 +32,12 @@ const About = () => {
                 data-aos-duration="3000">
                 <figure><img src="https://i.ibb.co/NWRvSLw/cus2.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">Faizan Ali</h2>
-                    <p>I recently relocated to the area for work and was in search of a place to call home. The team at SI Enterprise took the time to understand my unique situation and preferences, and they worked tirelessly to find a property that met my needs.</p>
+                    <Fade direction="down">
+                        <h2 className="card-title">Faizan Ali</h2>
+                    </Fade>
+                    <Fade direction="right">
+                        <p>The attention to detail in SI Art & Craft is printing work is impressive. My prints turned out exactly as I envisioned.</p>
+                    </Fade>
                     <p><span className=" text-lg font-semibold">Rating:</span> <div className="rating">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
@@ -36,7 +46,9 @@ const About = () => {
                             checked />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div></p>
-                    <h2 className="card-title">Engineer</h2>
+                    <Fade direction="up">
+                        <h2 className="card-title">Engineer</h2>
+                    </Fade>
                 </div>
             </div>
             <div className="card lg:w-96 bg-base-100 shadow-xl" data-aos="fade-left"
@@ -44,8 +56,12 @@ const About = () => {
                 data-aos-duration="3000">
                 <figure><img src="https://i.ibb.co/267VHqk/cus3.jpg" alt="Shoes" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">Rakib Islam</h2>
-                    <p>As a first-time homeBuyer, I was overwhelmed by the prospect of navigating the real estate market on my own. However, from the moment I contacted SI Enterprise, I felt at ease. Their team of experts guided me through every step of the process with patience and expertise.</p>
+                    <Fade direction="down">
+                        <h2 className="card-title">Rakib Islam</h2>
+                    </Fade>
+                    <Fade direction="right">
+                        <p>SI Art & Craft is rush printing service came in handy when I had a tight deadline. They delivered my prints promptly without compromising quality.</p>
+                    </Fade>
                     <p><span className=" text-lg font-semibold">Rating:</span> <div className="rating">
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
@@ -53,7 +69,9 @@ const About = () => {
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                     </div></p>
-                    <h2 className="card-title">Doctor</h2>
+                    <Fade direction="up">
+                        <h2 className="card-title">Doctor</h2>
+                    </Fade>
                 </div>
             </div>
 
