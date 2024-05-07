@@ -29,7 +29,8 @@ const AddCraft = () => {
         // console.log(newCraft);
 
         // send data to the server
-        fetch('http://localhost:5000/craft', {
+        // https://carft-store-server.vercel.app
+        fetch('https://carft-store-server.vercel.app/craft', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
